@@ -7,6 +7,10 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
+.constant('MCSBaseURL', ionic.Platform.isWebView() ?
+		'https://mcsoutboundpmtrial1dev-mcsoutboundpmtrialidm.mobileenv.us2.oraclecloud.com:443': 'http://localhost:8100')
+		
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
