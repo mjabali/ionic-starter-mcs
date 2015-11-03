@@ -45,9 +45,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','c
                         controller: 'LoginController'
                     })
 
-
-
             $urlRouterProvider.otherwise('/login');
-
 
         });
