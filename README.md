@@ -9,8 +9,9 @@ This template is provided "as-is" and you should make sure you adjust the code t
 
 To get started, run the following commands:
 
-$ ionic start <your_app_name> https://github.com/mjabali/ionic-starter-mcs
-$ cd <your_app_name>
+$ ionic start *your_app_name* https://github.com/mjabali/ionic-starter-mcs
+
+$ cd *your_app_name*
 
 Edit the www/js/app.js file and update the two constant variables (HostMcsUrl and MCSBackendID) on lines 9 and 10 to reflect your Oracle Mobile Cloud Service mobile backend. 
 
