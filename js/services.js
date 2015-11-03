@@ -31,7 +31,6 @@ angular.module('starter.services', [])
                         var req = {
                             method: 'GET',
                             url: loginUrl,
-                            /* we should look automate this process here as well */
                             headers: {
                                 'Content-Type': 'application/json',
                                 'Oracle-Mobile-Backend-Id': MCSBackendID,
@@ -39,20 +38,14 @@ angular.module('starter.services', [])
                             }
 
                         };
-//                        console.log(req);
 
                         $http(req)
                                 .success(function (data) {
-                                    //console.log(data);
-                                    // if all good go to the latest page where you was, in our case remove the login
-
                                     localstorage.set('logged_in_user', username);
                                     localstorage.set('authToken', authHeader);
                                     localstorage.setObject('workOrders', data);
                                     $rootScope.$broadcast('event:auth-loginConfirmed');
 
-                                    // find way to reset the controler
-                                    //$state.go($state.current, {}, {reload: true});
                                     $state.transitionTo('incidents', {}, {
                                         location: true,
                                         inherit: true,
@@ -65,8 +58,6 @@ angular.module('starter.services', [])
                                     console.log(keyValue);
                                     // DO NOT PUT ANYTHING HERE INSIDE, IT WILL BE HANDLED BY THE INTERCEPTOR
                                 });
-
-                        //return $http(req);
                     },
                     logout: function () {
                         if ($window.localStorage.getItem('logged_in_user')) {
@@ -76,7 +67,7 @@ angular.module('starter.services', [])
                             // clear history, BUT this DOES NOT reset the CONTROLLERS
                             $ionicHistory.clearHistory();
                             $ionicHistory.clearCache();
-                            alert("logout")
+                            alert("logout");
                             $state.transitionTo('login', {}, {
                             location: true,
                             inherit: true,

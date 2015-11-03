@@ -7,9 +7,7 @@ angular.module('starter.controllers', [])
 		})
 		.controller('IncidentListCtrl', function ($scope, IncidentService, UserAuthService){
             IncidentService.getIncidents().success(function (data) {
-
                 $scope.incidents = data.items;
-
             });
             $scope.userProfile = UserAuthService.getLoggedInUserProfile();
 		})
@@ -66,11 +64,9 @@ angular.module('starter.controllers', [])
                 if (status == 401) {
                     error = "Invalid Credentials ";
                 }
-
                 if (status == 403) {
                     error = "Access Denied";
                 }
-
                 $scope.message = error;
 
             });
