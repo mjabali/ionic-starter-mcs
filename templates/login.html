@@ -1,0 +1,38 @@
+<ion-modal-view class="login-background">
+
+    <ion-content scroll="false">
+
+        <div class="login-container">
+            <div class="login-content">
+                <img class="login-logo" src="img/oracle-logo.gif"  alt="Oracle"/> 
+
+                <form class="login-form">
+
+                    <label class="item item-input login-inputfield row">
+                        <i class="icon ion-person login-placeholder-icon"></i>
+                        <input type="text" ng-model="user.username" class=login-placeholder placeholder="Username">
+                    </label>
+
+
+                    <label class="item item-input login-inputfield row">
+                        <i class="icon ion-unlocked login-placeholder-icon"></i>
+                        <input type="password" ng-model="user.password" class=login-placeholder placeholder="Password">
+                    </label>
+
+                    
+                </form>
+                <hr class="login-line">
+                <!-- form -->
+                <button class="login-submitbutton" type="submit" ng-click="login()">LOG IN</button>
+                <!-- button -->
+
+
+            </div>
+
+            </section>
+            <!-- content -->
+        </div>
+        </div>
+
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,28 @@
+<ion-view title="Incidents">
+    <ion-nav-bar class="bar-stable">
+        
+        <ion-nav-buttons side="right">
+            <div class="profile-bar">
+                <img src="img/profile.jpeg" alt="" style="height: 35px;border-radius: 20px"/>
+
+                <div class="profile-username">{{userProfile.username}}</div>
+
+                <button class="button button-icon button-clear ion-log-out css-logout" ng-click="logout()">
+                </button>
+            </div>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+    
+    <ion-content class="has-header has-subheader">
+        <ion-list>
+            <ion-item ng-repeat="incident in incidents" type="item-text-wrap" class="list card item item-divider"
+                      href="#/incidents/{{incident.id}}">
+
+                <h2> {{incident.title}} </h2>
+                <p>{{incident.status}}</p> 
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
