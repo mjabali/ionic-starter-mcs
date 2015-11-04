@@ -20,7 +20,9 @@ $ ionic serve
 And you should be able to see the login page where you're going to authenticate against your mobile backend. Make sure you have the FixItFast mobile backend available as the demo code queries for incidents after the login process or update the code accordingly based on your needs.
 
 It's also recommended that you disable CORS before testing this example in the browser.
+
 Chrome: Run Chrome with the followin flag --disable-web-security
+
 Firefox: Run Firefox with about:config -> security.fileuri.strict_origin_policy -> false
 
 If you're successfuly able to run the demo, you can go ahead and test it in the emulator or real device.
