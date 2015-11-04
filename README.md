@@ -27,6 +27,14 @@ Firefox: Run Firefox with about:config -> security.fileuri.strict_origin_policy 
 
 If you're successfuly able to run the demo, you can go ahead and test it in the emulator or real device.
 
+Add your target platform (iOS, Android)
+$ ionic platform add *platform_of_choice*
+
+Build the app to your platform of choice
+$ ionic build *platform_of_choice*
+
+Run the app on the iOS Simulator or the Android Emulator
+$ ionic emulate *platform_of_choice*
 
 ## Issues
 
