@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
 			$scope.userProfile = UserAuthService.getLoggedInUserProfile();
 		})
 		.controller('IncidentListCtrl', function ($scope, IncidentService, UserAuthService){
-            IncidentService.getIncidents().success(function (data) {
+			IncidentService.getIncidents().success(function (data) {
                 $scope.incidents = data.items;
             });
             $scope.userProfile = UserAuthService.getLoggedInUserProfile();

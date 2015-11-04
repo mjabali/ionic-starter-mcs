@@ -13,9 +13,7 @@ angular.module('starter.services', [])
 		                        }
 		                    };
 		                    var resp = $http(req);
-		                    console.log("Response" + resp.data);
 		                    return resp;
-							
 						}
 					}
 				})
@@ -26,7 +24,7 @@ angular.module('starter.services', [])
                 return {
                     login: function (username, password) {
 
-						var loginUrl = HostMcsUrl + '/mobile/custom/incident/incidents?contact=lynn';
+						var loginUrl = HostMcsUrl + '/mobile/custom/incident/incidents/304/status';
                         var authHeader = 'Basic ' + btoa(username + ':' + password);
                         var req = {
                             method: 'GET',
@@ -45,7 +43,7 @@ angular.module('starter.services', [])
                                     localstorage.set('authToken', authHeader);
                                     localstorage.setObject('workOrders', data);
                                     $rootScope.$broadcast('event:auth-loginConfirmed');
-
+						
                                     $state.transitionTo('incidents', {}, {
                                         location: true,
                                         inherit: true,
