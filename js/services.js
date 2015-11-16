@@ -24,7 +24,7 @@ angular.module('starter.services', [])
                 return {
                     login: function (username, password) {
 
-						var loginUrl = HostMcsUrl + '/mobile/custom/incident/incidents/304/status';
+						var loginUrl = HostMcsUrl + '/mobile/custom/incident/incidents/567/status';
                         var authHeader = 'Basic ' + btoa(username + ':' + password);
                         var req = {
                             method: 'GET',
